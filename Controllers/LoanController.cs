@@ -14,13 +14,13 @@ namespace LoanCalculator.Controllers
         }
 
         [HttpGet]
-        public Loan Get()
+        public Loan Get(int amount, double rate, int months)
         {
             return new Loan
             {
-                Amount = 12000,
-                Rate = 3,
-                MonthsToPay = 12
+                Amount = amount,
+                Rate = rate,
+                MonthsToPay = months
             };
         }
     }
