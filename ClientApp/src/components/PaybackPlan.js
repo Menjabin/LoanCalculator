@@ -53,8 +53,7 @@ export class PaybackPlan extends Component {
     }
 
     async populateLoanData() {
-        let url = "https://serialloanapi.azurewebsites.net/";
-        let request = url + 'Loan?amount=' + this.props.amount + '&rate=' + this.props.rate + '&months=' + this.props.months;
+        let request = 'loan?amount=' + this.props.amount + '&rate=' + this.props.rate + '&months=' + this.props.months;
         const response = await fetch(request);
         const data = await response.json();
         this.setState({ loan: data, loading: false });
