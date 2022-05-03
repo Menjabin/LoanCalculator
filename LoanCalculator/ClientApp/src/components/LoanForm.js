@@ -6,7 +6,7 @@ export class LoanForm extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { amount: 0, months: 0, submitted: false };
+        this.state = { amount: 100000, years: 1, submitted: false };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,22 +23,46 @@ export class LoanForm extends Component {
 
     render() {
         let content = this.state.submitted
-            ? <PaybackPlan amount={this.state.amount} rate="3.5" months={this.state.months} />
+            ? <PaybackPlan amount={this.state.amount} rate="3.5" months={this.state.years * 12} />
             : []
 
         return (
             <>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        <b>Amount</b><br />
-                        <input name="amount" type="number" value={this.state.amount} onChange={this.handleChange} />
-                    </label><br />
-                    <label>
-                        <b>Payback time (months)</b><br />
-                        <input name="months" type="number" value={this.state.months} onChange={this.handleChange} />
-                    </label><br />
-                    <input type="submit" value="Submit" />
-                </form>
+                <div class="col-12 col-lg-10 text-center">
+                    <div class="calculatorSlider">
+                        <label class="" for="amount">Loan Amount</label>
+                        <div class="calculatorSlider-slider">
+                            <button class="calculatorSlider-slider-minus" tabIndex="-1">
+                                <span>-</span>
+                            </button>
+                            <input id="amountRange" name="amount" type="range" tabIndex="-1" min="100000" max="15000000" step="25000" value={this.state.amount} onChange={this.handleChange} />
+                            <button class="calculatorSlider-slider-plus" tabIndex="-1">
+                                <span>+</span>
+                            </button>
+                        </div>
+                        <div class="calculatorSlider-number">
+                            <input id="amount" name="amount" type="text" step="25000" value={this.state.amount} onChange={this.handleChange} />
+                            <span>kr</span>
+                        </div>
+                    </div>
+                    <div class="calculatorSlider">
+                        <label class="" for="term">Loan Term</label>
+                        <div class="calculatorSlider-slider">
+                            <button class="calculatorSlider-slider-minus" tabIndex="-1">
+                                <span>-</span>
+                            </button>
+                            <input id="termRange" name="years" type="range" tabIndex="-1" min="1" max="30" step="1" value={this.state.years} onChange={this.handleChange} />
+                            <button class="calculatorSlider-slider-plus" tabIndex="-1">
+                                <span>+</span>
+                            </button>
+                        </div>
+                        <div class="calculatorSlider-number">
+                            <input id="term" name="years" type="text" step="1" value={this.state.years} onChange={this.handleChange} />
+                            <span>years</span>
+                        </div>
+                    </div>
+                    <button onClick={this.handleSubmit}>Calculate plan</button>
+                </div>
                 {content}
             </>
         );

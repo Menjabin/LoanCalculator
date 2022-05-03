@@ -2,7 +2,7 @@
 "SpaProxyServer": {
 "ServerUrl": "https://localhost:44422",
 "LaunchCommand": "npm start",
-"WorkingDirectory": "C:\\Users\\benja\\source\\repos\\LoanCalculator\\ClientApp\\",
+"WorkingDirectory": "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator\\ClientApp\\",
 "MaxTimeoutInSeconds": "120"
 }
 }
