@@ -6,31 +6,39 @@ export class LoanForm extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { amount: 100000, years: 1, submitted: false };
+        // Initialize the state with default values
+        this.state = { amount: 100000, years: 1, content: null, submitted: false };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    // Dynamically update the form whenever the values are changed
     handleChange(event) {
+        // Each input has a name attribute corresponding to a state variable
         this.setState({ [event.target.name]: event.target.value });
     }
 
+    // We can now view the resulting plan
     handleSubmit(event) {
-        event.preventDefault();
         this.setState({ submitted: true });
     }
 
     render() {
-        let content = this.state.submitted
-            ? <PaybackPlan amount={this.state.amount} rate="3.5" months={this.state.years * 12} />
-            : []
+        let content = null;
+
+        if (this.state.submitted) {
+            content = <PaybackPlan amount={this.state.amount} rate="3.5" months={this.state.years * 12} />
+        }
 
         return (
             <>
+                {/* This div contains the whole input form */}
                 <div class="col-12 col-lg-10 text-center">
+                    {/* Each "calculatorSlider" controls a separate value. This one is for the loan amount */}
                     <div class="calculatorSlider">
-                        <label class="" for="amount">Loan Amount</label>
+                        <label class="test">Loan Amount</label>
+                        {/* The slider has two buttons beside it that also adjust the value */}
                         <div class="calculatorSlider-slider">
                             <button class="calculatorSlider-slider-minus" tabIndex="-1">
                                 <span>-</span>
@@ -40,13 +48,16 @@ export class LoanForm extends Component {
                                 <span>+</span>
                             </button>
                         </div>
+                        {/* The user can simply enter the value in this text field. The slider and text field will update each other when changed */}
                         <div class="calculatorSlider-number">
                             <input id="amount" name="amount" type="text" step="25000" value={this.state.amount} onChange={this.handleChange} />
                             <span>kr</span>
                         </div>
                     </div>
+                    {/* This div is for the loan term */}
                     <div class="calculatorSlider">
-                        <label class="" for="term">Loan Term</label>
+                        <label class="test">Loan Term</label>
+                        {/* This slider and text field are also connected to the same values */}
                         <div class="calculatorSlider-slider">
                             <button class="calculatorSlider-slider-minus" tabIndex="-1">
                                 <span>-</span>
@@ -61,6 +72,7 @@ export class LoanForm extends Component {
                             <span>years</span>
                         </div>
                     </div>
+                    {/* Calculate a plan with the current values */}
                     <button onClick={this.handleSubmit}>Calculate plan</button>
                 </div>
                 {content}
