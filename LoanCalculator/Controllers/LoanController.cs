@@ -23,42 +23,14 @@ namespace LoanCalculator.Controllers
         /// <param name="rate"><c>rate</c>: the annual payback rate for this loan</param>
         /// <param name="months"><c>months</c>: the loan term in months</param>
         /// </summary>
-        [HttpGet(Name = "GetLoan")]
-        public IEnumerable<Installment> Get(int amount, double rate, int months)
+        [HttpGet("{type}")]
+        public IEnumerable<Installment> Get(string type, int amount, int term)
         {
-            int principal = amount / months;
-
-            return Enumerable.Range(0, months).Select(index => new Installment
+            return type.ToLower() switch
             {
-                Date = DateTime.Now.AddMonths(index),
-                Rate = rate,
-                CurrentLoanAmount = amount - index * principal,
-                Principal = principal,
-                Months = months
-            })
-            .ToArray();
+                "housing" => new HousingLoan(amount, term).GetInstallments(),
+                _ => throw new NotSupportedException("Provide a supported loan type")
+            };
         }
-
-        /*
-        [Route("/error-development")]
-        //[ApiExplorerSettings(IgnoreApi = true)]
-        public IActionResult HandleErrorDevelopment([FromServices] IHostEnvironment hostEnvironment)
-        {
-            if (!hostEnvironment.IsDevelopment())
-            {
-                return NotFound();
-            }
-
-            var exceptionHandlerFeature = HttpContext.Features.Get<IExceptionHandlerFeature>()!;
-
-            return Problem(
-                detail: exceptionHandlerFeature.Error.StackTrace,
-                title: exceptionHandlerFeature.Error.Message
-            );
-        }
-
-        [Route("/error")]
-        public IActionResult HandleError() => Problem();
-        */
     }
 }

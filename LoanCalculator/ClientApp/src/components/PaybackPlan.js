@@ -68,7 +68,7 @@ export class PaybackPlan extends Component {
     }
 
     async populateLoanData() {
-        let request = 'loan?amount=' + this.props.amount + '&rate=' + this.props.rate + '&months=' + this.props.months;
+        let request = 'loan/housing?amount=' + this.props.amount + '&term=' + this.props.term;
         const response = await fetch(request);
         const data = await response.json();
         this.setState({ loan: data, loading: false });

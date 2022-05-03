@@ -2,23 +2,28 @@
 {
     public class Installment
     {
-        // Set these variables
-        public DateTime Date { get; set; }
+        // Due date for this installment
+        public string? Date { get; set; }
 
-        public double Rate { get; set; }
+        // Annual percentage rate, the yearly interest for this loan
+        public double Rate { private get; set; }
 
-        public int CurrentLoanAmount { private get; set; }
+        // Current debt before this installment is paid
+        public int CurrentDebt { private get; set; }
 
+        // Remaining debt after repaying this installment
+        public int RemainingDebt => CurrentDebt - Principal;
+
+        // Fixed amount paid each installment
         public int Principal { get; set; }
 
+        // Loan term in months
         public int Months { private get; set; }
 
-        // Calculate these variables
+        // Total amount to pay for this installment
         public int Amount => Principal + Interest;
 
-        public int RemainingDebt => CurrentLoanAmount - Principal;
-
         // (Rate / Months) converts the annual payback rate to monthly payback rate.
-        public int Interest => (int)Math.Round((CurrentLoanAmount * (Rate / Months) / 100));
+        public int Interest => (int)Math.Round((CurrentDebt * (Rate / Months) / 100));
     }
 }

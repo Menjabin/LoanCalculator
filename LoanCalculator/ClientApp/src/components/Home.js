@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { LoanForm } from './LoanForm';
-import { PaybackPlan } from './PaybackPlan';
 
 export class Home extends Component {
   static displayName = Home.name;
