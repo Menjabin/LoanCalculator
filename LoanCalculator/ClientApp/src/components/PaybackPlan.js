@@ -8,8 +8,22 @@ export class PaybackPlan extends Component {
         this.state = { installments: [], loading: true };
     }
 
+    // Fetch data upon mounting this component
     componentDidMount() {
         this.populateLoanData();
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        let update = false;
+
+        // Only fetch new data if a prop has changed
+        Object.entries(this.props).forEach(([key, val]) =>
+            prevProps[key] !== val && (update = true)
+        );
+
+        if (update) {
+            this.populateLoanData();
+        }
     }
 
     static renderLoanTable(installments) {
@@ -40,6 +54,7 @@ export class PaybackPlan extends Component {
     }
 
     render() {
+        // Show "Loading..." if we are still waiting for data
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
             : PaybackPlan.renderLoanTable(this.state.loan);
