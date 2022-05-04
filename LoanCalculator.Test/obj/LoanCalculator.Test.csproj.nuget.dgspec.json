@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/Users/benjamin/Projects/LoanCalculator/LoanCalculator.Test/LoanCalculator.Test.csproj": {}
+    "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator.Test\\LoanCalculator.Test.csproj": {}
   },
   "projects": {
-    "/Users/benjamin/Projects/LoanCalculator/LoanCalculator.Test/LoanCalculator.Test.csproj": {
+    "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator.Test\\LoanCalculator.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/benjamin/Projects/LoanCalculator/LoanCalculator.Test/LoanCalculator.Test.csproj",
+        "projectUniqueName": "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator.Test\\LoanCalculator.Test.csproj",
         "projectName": "LoanCalculator.Test",
-        "projectPath": "/Users/benjamin/Projects/LoanCalculator/LoanCalculator.Test/LoanCalculator.Test.csproj",
-        "packagesPath": "/Users/benjamin/.nuget/packages/",
-        "outputPath": "/Users/benjamin/Projects/LoanCalculator/LoanCalculator.Test/obj/",
+        "projectPath": "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator.Test\\LoanCalculator.Test.csproj",
+        "packagesPath": "C:\\Users\\benja\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/benjamin/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\benja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/benjamin/Projects/LoanCalculator/LoanCalculator/LoanCalculator.csproj": {
-                "projectPath": "/Users/benjamin/Projects/LoanCalculator/LoanCalculator/LoanCalculator.csproj"
+              "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator\\LoanCalculator.csproj": {
+                "projectPath": "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator\\LoanCalculator.csproj"
               }
             }
           }
@@ -44,13 +46,13 @@
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.11.0, )"
+              "version": "[17.1.0, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[3.1.2, )"
             },
             "xunit": {
               "target": "Package",
@@ -60,7 +62,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.4.3, )"
+              "version": "[2.4.4, )"
             }
           },
           "imports": [
@@ -78,26 +80,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/benjamin/Projects/LoanCalculator/LoanCalculator/LoanCalculator.csproj": {
+    "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator\\LoanCalculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/benjamin/Projects/LoanCalculator/LoanCalculator/LoanCalculator.csproj",
+        "projectUniqueName": "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator\\LoanCalculator.csproj",
         "projectName": "LoanCalculator",
-        "projectPath": "/Users/benjamin/Projects/LoanCalculator/LoanCalculator/LoanCalculator.csproj",
-        "packagesPath": "/Users/benjamin/.nuget/packages/",
-        "outputPath": "/Users/benjamin/Projects/LoanCalculator/LoanCalculator/obj/",
+        "projectPath": "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator\\LoanCalculator.csproj",
+        "packagesPath": "C:\\Users\\benja\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/benjamin/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\benja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -143,7 +147,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

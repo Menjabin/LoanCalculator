@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "coverlet.collector/3.1.0": {
+      "coverlet.collector/3.1.2": {
         "type": "package",
         "build": {
           "build/netstandard1.0/coverlet.collector.targets": {}
@@ -79,7 +79,7 @@
           "build/_._": {}
         }
       },
-      "Microsoft.CodeCoverage/16.11.0": {
+      "Microsoft.CodeCoverage/17.1.0": {
         "type": "package",
         "compile": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {}
@@ -201,11 +201,11 @@
           "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Microsoft.NET.Test.Sdk/16.11.0": {
+      "Microsoft.NET.Test.Sdk/17.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CodeCoverage": "16.11.0",
-          "Microsoft.TestPlatform.TestHost": "16.11.0"
+          "Microsoft.CodeCoverage": "17.1.0",
+          "Microsoft.TestPlatform.TestHost": "17.1.0"
         },
         "compile": {
           "lib/netcoreapp2.1/_._": {}
@@ -239,10 +239,10 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.TestPlatform.ObjectModel/16.11.0": {
+      "Microsoft.TestPlatform.ObjectModel/17.1.0": {
         "type": "package",
         "dependencies": {
-          "NuGet.Frameworks": "5.0.0",
+          "NuGet.Frameworks": "5.11.0",
           "System.Reflection.Metadata": "1.6.0"
         },
         "compile": {
@@ -336,10 +336,10 @@
           }
         }
       },
-      "Microsoft.TestPlatform.TestHost/16.11.0": {
+      "Microsoft.TestPlatform.TestHost/17.1.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.TestPlatform.ObjectModel": "16.11.0",
+          "Microsoft.TestPlatform.ObjectModel": "17.1.0",
           "Newtonsoft.Json": "9.0.1"
         },
         "compile": {
@@ -578,7 +578,7 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "NuGet.Frameworks/5.0.0": {
+      "NuGet.Frameworks/5.11.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/NuGet.Frameworks.dll": {}
@@ -1847,10 +1847,16 @@
           "lib/netstandard1.1/xunit.execution.dotnet.dll": {}
         }
       },
-      "xunit.runner.visualstudio/2.4.3": {
+      "xunit.runner.visualstudio/2.4.4": {
         "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/_._": {}
+        },
         "build": {
-          "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
+          "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
       },
       "LoanCalculator/1.0.0": {
@@ -1873,10 +1879,10 @@
     }
   },
   "libraries": {
-    "coverlet.collector/3.1.0": {
-      "sha512": "YzYqSRrjoP5lULBhTDcTOjuM4IDPPi6PhFsl4w8EI4WdZhE6llt7E38Tg4CHyrS+QKwyu1+9OwkdDgluOdoBTw==",
+    "coverlet.collector/3.1.2": {
+      "sha512": "wuLDIDKD5XMt0A7lE31JPenT7QQwZPFkP5rRpdJeblyXZ9MGLI8rYjvm5fvAKln+2/X+4IxxQDxBtwdrqKNLZw==",
       "type": "package",
-      "path": "coverlet.collector/3.1.0",
+      "path": "coverlet.collector/3.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1920,7 +1926,7 @@
         "build/netstandard1.0/coverlet.core.dll",
         "build/netstandard1.0/coverlet.core.pdb",
         "coverlet-icon.png",
-        "coverlet.collector.3.1.0.nupkg.sha512",
+        "coverlet.collector.3.1.2.nupkg.sha512",
         "coverlet.collector.nuspec"
       ]
     },
@@ -1991,10 +1997,10 @@
         "microsoft.aspnetcore.spaproxy.nuspec"
       ]
     },
-    "Microsoft.CodeCoverage/16.11.0": {
-      "sha512": "wf6lpAeCqP0KFfbDVtfL50lr7jY1gq0+0oSphyksfLOEygMDXqnaxHK5LPFtMEhYSEtgXdNyXNnEddOqQQUdlQ==",
+    "Microsoft.CodeCoverage/17.1.0": {
+      "sha512": "0N/ZJ71ncCxQWhgtkEYKOgu2oMHa8h1tsOUbhmIKXF8UwtSUCe4vHAsJ3DVcNWRwNfQzSTy263ZE+QF6MdIhhQ==",
       "type": "package",
-      "path": "microsoft.codecoverage/16.11.0",
+      "path": "microsoft.codecoverage/17.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2021,10 +2027,13 @@
         "build/netstandard1.0/CodeCoverage/msvcp140.dll",
         "build/netstandard1.0/CodeCoverage/msvcp140_atomic_wait.dll",
         "build/netstandard1.0/CodeCoverage/vcruntime140.dll",
-        "build/netstandard1.0/InstrumentationEngine/alpine/x64/ProductionBreakpoints_x64.config",
+        "build/netstandard1.0/InstrumentationEngine/alpine/x64/VanguardInstrumentationProfiler_x64.config",
         "build/netstandard1.0/InstrumentationEngine/alpine/x64/libCoverageInstrumentationMethod.so",
         "build/netstandard1.0/InstrumentationEngine/alpine/x64/libInstrumentationEngine.so",
-        "build/netstandard1.0/InstrumentationEngine/ubuntu/x64/ProductionBreakpoints_x64.config",
+        "build/netstandard1.0/InstrumentationEngine/macos/x64/VanguardInstrumentationProfiler_x64.config",
+        "build/netstandard1.0/InstrumentationEngine/macos/x64/libCoverageInstrumentationMethod.dylib",
+        "build/netstandard1.0/InstrumentationEngine/macos/x64/libInstrumentationEngine.dylib",
+        "build/netstandard1.0/InstrumentationEngine/ubuntu/x64/VanguardInstrumentationProfiler_x64.config",
         "build/netstandard1.0/InstrumentationEngine/ubuntu/x64/libCoverageInstrumentationMethod.so",
         "build/netstandard1.0/InstrumentationEngine/ubuntu/x64/libInstrumentationEngine.so",
         "build/netstandard1.0/InstrumentationEngine/x64/MicrosoftInstrumentationEngine_x64.dll",
@@ -2053,7 +2062,7 @@
         "build/netstandard1.0/zh-Hant/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
         "lib/net45/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
         "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
-        "microsoft.codecoverage.16.11.0.nupkg.sha512",
+        "microsoft.codecoverage.17.1.0.nupkg.sha512",
         "microsoft.codecoverage.nuspec"
       ]
     },
@@ -2207,10 +2216,10 @@
         "microsoft.net.http.headers.nuspec"
       ]
     },
-    "Microsoft.NET.Test.Sdk/16.11.0": {
-      "sha512": "f4mbG1SUSkNWF5p7B3Y8ZxMsvKhxCmpZhdl+w6tMtLSUGE7Izi1syU6TkmKOvB2BV66pdbENConFAISOix4ohQ==",
+    "Microsoft.NET.Test.Sdk/17.1.0": {
+      "sha512": "MVKvOsHIfrZrvg+8aqOF5dknO/qWrR1sWZjMPQ1N42MKMlL/zQL30FQFZxPeWfmVKWUWAOmAHYsqB5OerTKziw==",
       "type": "package",
-      "path": "microsoft.net.test.sdk/16.11.0",
+      "path": "microsoft.net.test.sdk/17.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2237,7 +2246,7 @@
         "lib/netcoreapp1.0/_._",
         "lib/netcoreapp2.1/_._",
         "lib/uap10.0/_._",
-        "microsoft.net.test.sdk.16.11.0.nupkg.sha512",
+        "microsoft.net.test.sdk.17.1.0.nupkg.sha512",
         "microsoft.net.test.sdk.nuspec"
       ]
     },
@@ -2271,10 +2280,10 @@
         "runtime.json"
       ]
     },
-    "Microsoft.TestPlatform.ObjectModel/16.11.0": {
-      "sha512": "EiknJx9N9Z30gs7R+HHhki7fA8EiiM3pwD1vkw3bFsBC8kdVq/O7mHf1hrg5aJp+ASO6BoOzQueD2ysfTOy/Bg==",
+    "Microsoft.TestPlatform.ObjectModel/17.1.0": {
+      "sha512": "OMo/FYnKGy3lZEK0gfitskRM3ga/YBt6MyCyFPq0xNLeybGOQ6HnYNAAvzyePo5WPuMiw3LX+HiuRWNjnas1fA==",
       "type": "package",
-      "path": "microsoft.testplatform.objectmodel/16.11.0",
+      "path": "microsoft.testplatform.objectmodel/17.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2512,14 +2521,14 @@
         "lib/uap10.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
         "lib/uap10.0/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll",
         "lib/uap10.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "microsoft.testplatform.objectmodel.16.11.0.nupkg.sha512",
+        "microsoft.testplatform.objectmodel.17.1.0.nupkg.sha512",
         "microsoft.testplatform.objectmodel.nuspec"
       ]
     },
-    "Microsoft.TestPlatform.TestHost/16.11.0": {
-      "sha512": "/Q+R0EcCJE8JaYCk+bGReicw/xrB0HhecrYrUcLbn95BnAlaTJrZhoLkUhvtKTAVtqX/AIKWXYtutiU/Q6QUgg==",
+    "Microsoft.TestPlatform.TestHost/17.1.0": {
+      "sha512": "JS0JDLniDhIzkSPLHz7N/x1CG8ywJOtwInFDYA3KQvbz+ojGoT5MT2YDVReL1b86zmNRV8339vsTSm/zh0RcMg==",
       "type": "package",
-      "path": "microsoft.testplatform.testhost/16.11.0",
+      "path": "microsoft.testplatform.testhost/17.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2733,7 +2742,7 @@
         "lib/uap10.0/Microsoft.VisualStudio.TestPlatform.Common.dll",
         "lib/uap10.0/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
         "lib/uap10.0/testhost.dll",
-        "microsoft.testplatform.testhost.16.11.0.nupkg.sha512",
+        "microsoft.testplatform.testhost.17.1.0.nupkg.sha512",
         "microsoft.testplatform.testhost.nuspec"
       ]
     },
@@ -2815,20 +2824,21 @@
         "tools/install.ps1"
       ]
     },
-    "NuGet.Frameworks/5.0.0": {
-      "sha512": "c5JVjuVAm4f7E9Vj+v09Z9s2ZsqFDjBpcsyS3M9xRo0bEdm/LVZSzLxxNvfvAwRiiE8nwe1h2G4OwiwlzFKXlA==",
+    "NuGet.Frameworks/5.11.0": {
+      "sha512": "eaiXkUjC4NPcquGWzAGMXjuxvLwc6XGKMptSyOGQeT0X70BUZObuybJFZLA0OfTdueLd3US23NBPTBb6iF3V1Q==",
       "type": "package",
-      "path": "nuget.frameworks/5.0.0",
+      "path": "nuget.frameworks/5.11.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "icon.png",
         "lib/net40/NuGet.Frameworks.dll",
         "lib/net40/NuGet.Frameworks.xml",
         "lib/net472/NuGet.Frameworks.dll",
         "lib/net472/NuGet.Frameworks.xml",
         "lib/netstandard2.0/NuGet.Frameworks.dll",
         "lib/netstandard2.0/NuGet.Frameworks.xml",
-        "nuget.frameworks.5.0.0.nupkg.sha512",
+        "nuget.frameworks.5.11.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
       ]
     },
@@ -6461,24 +6471,24 @@
         "xunit.extensibility.execution.nuspec"
       ]
     },
-    "xunit.runner.visualstudio/2.4.3": {
-      "sha512": "kZZSmOmKA8OBlAJaquPXnJJLM9RwQ27H7BMVqfMLUcTi9xHinWGJiWksa3D4NEtz0wZ/nxd2mogObvBgJKCRhQ==",
+    "xunit.runner.visualstudio/2.4.4": {
+      "sha512": "6iEHJlHdie0v792U3WUZl0DT6aY9O/zuWQIWKH8GOTWiZdiSup4mpyyNt+LQM5nvscwEAssFBDOGIXuYExj6Hg==",
       "type": "package",
-      "path": "xunit.runner.visualstudio/2.4.3",
+      "path": "xunit.runner.visualstudio/2.4.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "License.txt",
-        "build/net452/xunit.abstractions.dll",
-        "build/net452/xunit.runner.reporters.net452.dll",
-        "build/net452/xunit.runner.utility.net452.dll",
-        "build/net452/xunit.runner.visualstudio.props",
-        "build/net452/xunit.runner.visualstudio.testadapter.dll",
-        "build/netcoreapp2.1/xunit.abstractions.dll",
-        "build/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll",
-        "build/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll",
-        "build/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll",
-        "build/netcoreapp2.1/xunit.runner.visualstudio.props",
+        "build/net472/xunit.abstractions.dll",
+        "build/net472/xunit.runner.reporters.net452.dll",
+        "build/net472/xunit.runner.utility.net452.dll",
+        "build/net472/xunit.runner.visualstudio.props",
+        "build/net472/xunit.runner.visualstudio.testadapter.dll",
+        "build/netcoreapp3.1/xunit.abstractions.dll",
+        "build/netcoreapp3.1/xunit.runner.reporters.netcoreapp10.dll",
+        "build/netcoreapp3.1/xunit.runner.utility.netcoreapp10.dll",
+        "build/netcoreapp3.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll",
+        "build/netcoreapp3.1/xunit.runner.visualstudio.props",
         "build/uap10.0.16299/xunit.runner.reporters.netstandard15.dll",
         "build/uap10.0.16299/xunit.runner.utility.netstandard15.dll",
         "build/uap10.0.16299/xunit.runner.utility.uwp10.dll",
@@ -6487,8 +6497,11 @@
         "build/uap10.0.16299/xunit.runner.visualstudio.targets",
         "build/uap10.0.16299/xunit.runner.visualstudio.uwp.testadapter.dll",
         "build/uap10.0.16299/xunit.runner.visualstudio.uwp.testadapter.pri",
+        "lib/net472/_._",
+        "lib/netcoreapp3.1/_._",
+        "lib/uap10.0.16299/_._",
         "logo-512-transparent.png",
-        "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
+        "xunit.runner.visualstudio.2.4.4.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
     },
@@ -6501,39 +6514,41 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "LoanCalculator >= 1.0.0",
-      "Microsoft.NET.Test.Sdk >= 16.11.0",
-      "coverlet.collector >= 3.1.0",
+      "Microsoft.NET.Test.Sdk >= 17.1.0",
+      "coverlet.collector >= 3.1.2",
       "xunit >= 2.4.1",
-      "xunit.runner.visualstudio >= 2.4.3"
+      "xunit.runner.visualstudio >= 2.4.4"
     ]
   },
   "packageFolders": {
-    "/Users/benjamin/.nuget/packages/": {}
+    "C:\\Users\\benja\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/benjamin/Projects/LoanCalculator/LoanCalculator.Test/LoanCalculator.Test.csproj",
+      "projectUniqueName": "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator.Test\\LoanCalculator.Test.csproj",
       "projectName": "LoanCalculator.Test",
-      "projectPath": "/Users/benjamin/Projects/LoanCalculator/LoanCalculator.Test/LoanCalculator.Test.csproj",
-      "packagesPath": "/Users/benjamin/.nuget/packages/",
-      "outputPath": "/Users/benjamin/Projects/LoanCalculator/LoanCalculator.Test/obj/",
+      "projectPath": "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator.Test\\LoanCalculator.Test.csproj",
+      "packagesPath": "C:\\Users\\benja\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/benjamin/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\benja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/benjamin/Projects/LoanCalculator/LoanCalculator/LoanCalculator.csproj": {
-              "projectPath": "/Users/benjamin/Projects/LoanCalculator/LoanCalculator/LoanCalculator.csproj"
+            "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator\\LoanCalculator.csproj": {
+              "projectPath": "C:\\Users\\benja\\source\\repos\\LoanCalculator\\LoanCalculator\\LoanCalculator.csproj"
             }
           }
         }
@@ -6550,13 +6565,13 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
-            "version": "[16.11.0, )"
+            "version": "[17.1.0, )"
           },
           "coverlet.collector": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[3.1.0, )"
+            "version": "[3.1.2, )"
           },
           "xunit": {
             "target": "Package",
@@ -6566,7 +6581,7 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.4.3, )"
+            "version": "[2.4.4, )"
           }
         },
         "imports": [
@@ -6584,7 +6599,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
