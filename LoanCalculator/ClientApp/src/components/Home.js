@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import { LoanForm } from './LoanForm';
 
 export class Home extends Component {
@@ -7,8 +7,8 @@ export class Home extends Component {
   render () {
     return (
       <div class="text-center">
-        <h1>Housing Loan</h1>
-        <p>Our loans have a fixed rate of 3.5%. Find your amoritization schedule here:</p>
+        <h1>Mortgage Calculator</h1>
+        <p>Our loans have a fixed rate of 3.5%. Find your amortization schedule here:</p>
         <LoanForm />
       </div>
     );

@@ -42,10 +42,10 @@ export class PaybackPlan extends Component {
                     {installments.map(installment =>
                         <tr key={installment.date}>
                             <td>{installment.date}</td>
-                            <td>{installment.amount}</td>
-                            <td>{installment.principal}</td>
-                            <td>{installment.interest}</td>
-                            <td>{installment.remainingDebt}</td>
+                            <td>{installment.amount} kr</td>
+                            <td>{installment.principal} kr</td>
+                            <td>{installment.interest} kr</td>
+                            <td>{installment.remainingDebt} kr</td>
                         </tr>
                     )}
                 </tbody>
@@ -61,7 +61,7 @@ export class PaybackPlan extends Component {
 
         return (
             <div>
-                <p>With a rate of {this.props.rate}%, your payback plan will look something like this:</p>
+                <p>With a rate of 3.5%, your payback plan will look something like this:</p>
                 {contents}
             </div>
         );
