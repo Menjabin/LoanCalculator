@@ -2,15 +2,15 @@
 {
 	public class SerialLoan : Loan
 	{
-		public SerialLoan(int amount, double rate, int years) : base(amount, rate, years)
+		public SerialLoan(decimal amount, double rate, int years) : base(amount, rate, years)
 		{
 			
 		}
 
-        protected override IEnumerable<Installment> GenerateInstallments(int amount, double rate, int years)
+        protected override IEnumerable<Installment> GenerateInstallments(decimal amount, double rate, int years)
         {
             int months = years * 12;
-            int principal = (int) Math.Round((decimal) (amount / months));
+            decimal principal = amount / months;
 
             return Enumerable.Range(0, months).Select(index => new Installment
             {

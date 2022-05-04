@@ -5,7 +5,7 @@
         public double Rate { get; }
         public IEnumerable<Installment> Installments { get; }
 
-        public int TotalInterest { get; } = 0;
+        public decimal TotalInterest { get; } = 0;
 
         /// <summary>
         /// Create a generic loan
@@ -13,7 +13,7 @@
         /// <param name="amount">Total loan amount</param>
         /// <param name="rate">Annual Percentage Rate. The yearly rate for this loan</param>
         /// <param name="years">Loan term in years</param>
-		public Loan(int amount, double rate, int years)
+		public Loan(decimal amount, double rate, int years)
 		{
             Rate = rate;
             Installments = GenerateInstallments(amount, rate, years);
@@ -31,6 +31,6 @@
         /// <param name="rate">Yearly rate for this loan</param>
         /// <param name="years">Loan term in years</param>
         /// <returns>An enumerable list of the installments that make up this loan</returns>
-        protected abstract IEnumerable<Installment> GenerateInstallments(int amount, double rate, int years);
+        protected abstract IEnumerable<Installment> GenerateInstallments(decimal amount, double rate, int years);
 	}
 }

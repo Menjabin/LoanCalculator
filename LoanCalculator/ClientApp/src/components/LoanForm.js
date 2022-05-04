@@ -25,7 +25,7 @@ export class LoanForm extends Component {
 
     // We can now view the resulting plan
     handleSubmit(event) {
-        this.setState({ content: <PaybackPlan amount={this.state.amount} term={this.state.years} /> });
+        this.setState({ content: <PaybackPlan amount={this.state.amount} years={this.state.years} /> });
     }
 
     render() {
