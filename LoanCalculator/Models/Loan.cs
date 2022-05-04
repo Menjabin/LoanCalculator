@@ -2,6 +2,8 @@
 {
 	public abstract class Loan
 	{
+        public int Id { get; set; }
+
         public double Rate { get; }
         public IEnumerable<Installment> Installments { get; }
 

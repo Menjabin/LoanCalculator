@@ -2,6 +2,8 @@
 {
     public class Installment
     {
+        public int Id { get; set; }
+
         // Due date for this installment
         public string? Date { get; set; }
 
