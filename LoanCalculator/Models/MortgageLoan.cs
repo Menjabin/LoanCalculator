@@ -2,8 +2,8 @@
 {
     public class MortgageLoan : SerialLoan
     {
-        public double rate = 3.5;
 
+        // All mortgage loans have a rate of 3.5
         public MortgageLoan(decimal amount, int years) : base(amount, 3.5, years)
         {
 

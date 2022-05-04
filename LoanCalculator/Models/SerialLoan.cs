@@ -9,7 +9,7 @@ namespace LoanCalculator.Models
 			
 		}
 
-        protected override IEnumerable<Installment> GenerateInstallments(decimal amount, double rate, int years)
+        protected override List<Installment> GenerateInstallments(decimal amount, double rate, int years)
         {
             // Verify that these parameters are okay
             if (amount < 0)
@@ -39,7 +39,7 @@ namespace LoanCalculator.Models
                 Principal = principal,
                 Months = months
             })
-            .ToArray();
+            .ToList();
         }
     }
 }

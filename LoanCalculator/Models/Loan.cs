@@ -2,10 +2,11 @@
 {
 	public abstract class Loan
 	{
-        public int Id { get; set; }
+        public int ID { get; set; }
 
-        public double Rate { get; }
-        public IEnumerable<Installment> Installments { get; }
+        public double Rate { get; set; }
+
+        public List<Installment> Installments { get; }
 
         public decimal TotalInterest { get; } = 0;
 
@@ -33,6 +34,6 @@
         /// <param name="rate">Yearly rate for this loan</param>
         /// <param name="years">Loan term in years</param>
         /// <returns>An enumerable list of the installments that make up this loan</returns>
-        protected abstract IEnumerable<Installment> GenerateInstallments(decimal amount, double rate, int years);
+        protected abstract List<Installment> GenerateInstallments(decimal amount, double rate, int years);
 	}
 }
