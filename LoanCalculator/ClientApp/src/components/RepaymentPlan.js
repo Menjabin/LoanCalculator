@@ -1,7 +1,7 @@
 ﻿import React, { Component } from 'react';
 
-export class PaybackPlan extends Component {
-    static displayName = PaybackPlan.name;
+export class RepaymentPlan extends Component {
+    static displayName = RepaymentPlan.name;
 
     constructor(props) {
         super(props);
@@ -31,7 +31,7 @@ export class PaybackPlan extends Component {
             <table className='table table-striped' aria-labelledby="tabelLabel">
                 <thead>
                     <tr>
-                        <th>Date</th>
+                        <th>Due Date</th>
                         <th>Amount</th>
                         <th>Principal</th>
                         <th>Interest</th>
@@ -42,10 +42,10 @@ export class PaybackPlan extends Component {
                     {installments.map(installment =>
                         <tr key={installment.date}>
                             <td>{installment.date}</td>
-                            <td>{installment.amount} kr</td>
-                            <td>{installment.principal} kr</td>
-                            <td>{installment.interest} kr</td>
-                            <td>{installment.remainingDebt} kr</td>
+                            <td>{Math.round(installment.amount)} kr</td>
+                            <td>{Math.round(installment.principal)} kr</td>
+                            <td>{Math.round(installment.interest)} kr</td>
+                            <td>{Math.round(installment.remainingDebt)} kr</td>
                         </tr>
                     )}
                 </tbody>
@@ -57,11 +57,10 @@ export class PaybackPlan extends Component {
         // Show "Loading..." if we are still waiting for data
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            : PaybackPlan.renderLoanTable(this.state.loan.installments);
+            : RepaymentPlan.renderLoanTable(this.state.loan.installments);
 
         return (
-            <div>
-                <p>With a rate of 3.5%, your payback plan will look something like this:</p>
+            <div class="repayment">
                 {contents}
             </div>
         );

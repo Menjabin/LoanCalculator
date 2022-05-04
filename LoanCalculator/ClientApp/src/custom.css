@@ -19,7 +19,7 @@ code {
     max-width: 47.5rem;
     display: flex;
     width: 100%;
-    margin: 0 auto;
+    margin: auto auto;
     align-items: center;
     position: relative;
 }
@@ -42,50 +42,13 @@ code {
     flex: 0 0 22.5rem;
 }
 
-.calculatorSlider .calculatorSlider-slider button.calculatorSlider-slider-minus {
-    left: unset;
-}
-
-.calculatorSlider .calculatorSlider-slider button {
-    position: relative;
-    width: 1.5rem;
-    min-width: 1.5rem;
-    height: 1.5rem;
-    top: unset;
-    right: unset;
-
-    border-radius: 50%;
-    display: inline-block;
-    color: #fff;
-    background: #567592;
-    box-shadow: none;
-    border: 0;
-    margin: 0 0.75rem;
-    padding: 0;
-}
-
 button:not(:disabled) {
     cursor: pointer;
 }
 
-button {
-    text-transform: none;
-}
-
-.calculatorSlider .calculatorSlider-slider button span {
-    transform: translate(-50%, -60%);
-}
-
-.calculatorSlider .calculatorSlider-slider button span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-}
-
 .calculatorSlider .calculatorSlider-slider input[type="range"] {
-    width: 15.625rem;
+    width: 90%;
+    margin: auto auto;
     display: block;
     height: 0.375rem;
     border-radius: 0.3125rem;
@@ -109,7 +72,7 @@ button, input {
 }
 
 .calculatorSlider-number {
-    background: #ebeff5;
+    background: #e1e1e1;
     border-radius: 2.5rem;
     display: flex;
     align-items: center;
@@ -126,7 +89,23 @@ button, input {
     width: 7.6875rem;
     margin-left: 1rem;
     border: 0;
-    background: #ebeff5;
+    background: #e1e1e1;
     color: #222f49;
     font-size: 1.1875rem;
+}
+
+button {
+    background-color: #116ec2;
+    color: #fff;
+    padding: 0.6rem;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #116ec2;
+}
+
+div.repayment {
+    margin-top: 1rem;
 }
