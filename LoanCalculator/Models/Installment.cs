@@ -4,8 +4,6 @@
     {
         public int ID { get; set; }
 
-        public Loan? Loan { get; set; }
-
         // Due date for this installment
         public string? Date { get; set; }
 

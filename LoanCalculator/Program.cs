@@ -1,5 +1,5 @@
-﻿using LoanCalculator.Data;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using LoanCalculator.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

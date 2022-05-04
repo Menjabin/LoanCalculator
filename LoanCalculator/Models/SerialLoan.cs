@@ -33,7 +33,6 @@ namespace LoanCalculator.Models
 
             return Enumerable.Range(0, months).Select(index => new Installment
             {
-                Loan = this,
                 Date = DateTime.Now.AddMonths(index).ToShortDateString(),
                 Rate = rate,
                 CurrentDebt = amount - index * principal,
