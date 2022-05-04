@@ -2,11 +2,15 @@
 {
 	public abstract class Loan
 	{
-        public int ID { get; set; }
+        public int LoanId { get; set; }
+
+        public List<Installment> Installments { get; } = new();
+
+        public decimal Amount { get; set; }
 
         public double Rate { get; set; }
 
-        public List<Installment> Installments { get; }
+        public int Years { get; set; }
 
         public decimal TotalInterest { get; } = 0;
 
@@ -18,7 +22,6 @@
         /// <param name="years">Loan term in years</param>
 		public Loan(decimal amount, double rate, int years)
 		{
-            Rate = rate;
             Installments = GenerateInstallments(amount, rate, years);
 
             // Loop through all installments and add up the interest

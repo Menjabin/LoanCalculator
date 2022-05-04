@@ -50,7 +50,7 @@ namespace LoanCalculator.Controllers
         [HttpDelete("{id}")]
         public ObjectResult Delete(int id)
         {
-            var loan = loans.Find(l => l.ID == id);
+            var loan = loans.Find(l => l.LoanId == id);
             if (loan == null)
                 return BadRequest("Loan not found");
 
