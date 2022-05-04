@@ -5,7 +5,7 @@ export class PaybackPlan extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { installments: [], loading: true };
+        this.state = { loan: [], loading: true };
     }
 
     // Fetch data upon mounting this component
@@ -57,7 +57,7 @@ export class PaybackPlan extends Component {
         // Show "Loading..." if we are still waiting for data
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            : PaybackPlan.renderLoanTable(this.state.loan);
+            : PaybackPlan.renderLoanTable(this.state.loan.installments);
 
         return (
             <div>
@@ -68,7 +68,7 @@ export class PaybackPlan extends Component {
     }
 
     async populateLoanData() {
-        let request = 'loan/housing?amount=' + this.props.amount + '&term=' + this.props.term;
+        let request = 'loan/mortgage?amount=' + this.props.amount + '&term=' + this.props.term;
         const response = await fetch(request);
         const data = await response.json();
         this.setState({ loan: data, loading: false });

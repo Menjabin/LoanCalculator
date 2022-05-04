@@ -20,17 +20,16 @@ namespace LoanCalculator.Test
         {
             int amount = 12000;
             double rate = 3.5;
-            int months = 12;
+            int years = 1;
 
-            int principal = amount / months;
+            int principal = amount / years;
 
-            var result = _controller.Get(amount, rate, months);
+            var result = _controller.Get("housing", amount, years);
 
             foreach (var installment in result)
             {
-                int interest = (int)Math.Round(amount * (rate / months) / 100);
+                int interest = (int)Math.Round(amount * (rate / (years * 12)) / 100);
 
-                Assert.Equal(rate, installment.Rate);
                 Assert.Equal(principal, installment.Principal);
                 Assert.Equal(interest, installment.Interest);
 
